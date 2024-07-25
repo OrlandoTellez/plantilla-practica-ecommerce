@@ -1,0 +1,76 @@
+<footer>
+  <div class="seccion-footer">
+    <article>
+      <h2 class="logo">Zay shop</h2>
+      <ul>
+        <li><a href=""> 123 Consectetur at ligula 10660</a></li>
+        <li><a href=""> 010-020-0340</a></li>
+        <li><a href=""> info@zayshop.com</a></li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Productos</h2>
+      <ul>
+        <li><a href=""> Luxury</a></li>
+        <li><a href=""> Sport Wear</a></li>
+        <li><a href=""> Men's Shoes</a></li>
+        <li><a href=""> Womens Shoes</a></li>
+        <li><a href=""> Popular Dress</a></li>
+        <li><a href=""> Gym Accessories</a></li>
+        <li><a href=""> Sport Shoes</a></li>
+      </ul>
+    </article>
+
+    <article>
+        <h2>Further Info</h2>
+        <ul>
+          <li><a href=""> Home</a></li>
+          <li><a href=""> About Us</a></li>
+          <li><a href=""> Shop Locations</a></li>
+          <li><a href=""> FAQs</a></li>
+          <li><a href=""> Contact</a></li>  
+        </ul>
+      </article>
+  </div>
+</footer>
+
+<style>
+  footer {
+    width: 100%;
+    background-color: var(--color-azul-oscuro);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+  }
+
+  .seccion-footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1200px;
+    gap: 20px;
+  }
+
+  article {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 15px;
+  }
+
+  .logo {
+    color: var(--color-verde-principal);
+  }
+</style>
