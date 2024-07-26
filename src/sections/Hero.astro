@@ -40,8 +40,6 @@
         gap: 10px;
     }
 
-    
-
     article h1{
         color: var(--color-verde-principal);
         font-weight: 300;
@@ -57,5 +55,25 @@
 
     img{
         max-width: 100%;
+    }
+
+    @media only screen and (min-width: 1024px){
+        section{
+            height: 90vh;
+        }
+        article{
+            flex-direction: row;
+            max-width: 1024px;
+            gap: 90px;
+        }
+
+        article div{
+            max-width: 475px;
+        }
+
+        figure{
+            width: 500px;
+        }
+
     }
 </style>
