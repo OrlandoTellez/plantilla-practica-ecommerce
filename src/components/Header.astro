@@ -1,0 +1,188 @@
+---
+
+---
+
+<header>
+  <div class="container-header">
+    <figure>
+      <h2>Zay shop</h2>
+    </figure>
+    <div class="opacity on"></div>
+    <figure class="menu-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="currenColor"
+        stroke="black"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path d="M4 18l16 0"
+        ></path>
+      </svg>
+    </figure>
+    <nav class="nav active">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About</a></li>
+        <li><a href="/">Shop</a></li>
+        <li><a href="/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+    padding: 20px;
+    background-color: white;
+  }
+
+  .container-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1024px;
+    color: var(--color-azul-oscuro);
+  }
+
+  .container-header figure h2 {
+    font-size: 1em;
+    text-align: start;
+    color: var(--color-verde-principal);
+  }
+
+  .menu-icon {
+    position: relative;
+    z-index: 15;
+  }
+
+  header nav {
+    position: absolute;
+    height: 100vh;
+    width: 80vw;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: all ease 0.4s;
+  }
+
+  header .active {
+    transform: translate(-600px);
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    gap: 20px;
+    height: 100vh;
+    font-size: var(--textos);
+  }
+
+  header nav ul li {
+    list-style: none;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.5s;
+    font-size: var(--texto);
+  }
+
+  header nav ul li a:hover {
+    list-style: none;
+    color: rgb(199, 49, 92);
+    border-bottom: 2px solid var(--color-terciario);
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  .on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .opacity {
+    opacity: 0;
+    display: none;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .menu-icon {
+      display: none;
+    }
+
+    header nav {
+      position: static;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      width: 100vw;
+
+      align-items: flex-end;
+
+      transition: all ease 0s;
+    }
+
+    header .active {
+      transform: translate(0px);
+    }
+
+    header nav ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: end;
+      gap: 30px;
+      height: 100%;
+      margin-top: 0px;
+    }
+
+    header nav ul li a {
+      color: var(--white);
+      font-weight: 500;
+      width: 100%;
+      font-size: 1em;
+    }
+  }
+</style>
+
+<script is:inline>
+  let icono = document.querySelector(".menu-icon");
+  let contenedor = document.querySelector(".nav");
+  let opacidad = document.querySelector(".opacity");
+  let light = document.querySelector("#toggle");
+  icono.addEventListener("click", (e) => {
+    contenedor.classList.toggle("active");
+    opacidad.classList.toggle("opacity");
+  });
+</script>
