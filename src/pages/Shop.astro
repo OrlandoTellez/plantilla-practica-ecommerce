@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../sections/Hero.astro';
+import Footer from '../sections/Footer.astro';
+import ProductosDestacados from '../sections/ProductosDestacados.astro';
+---
+
+<Layout title="Shop">
+	<Hero />
+	<main>
+		<ProductosDestacados />
+	</main>
+</Layout>
+
+<style>
+	main{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	/* @media only screen and (min-width: 1200px){
+        main{
+            width: 100%;
+        }
+    } */
+</style>
