@@ -1,10 +1,10 @@
 ---
 // Supports weights 100-900
-import '@fontsource-variable/montserrat';
-import Header from '../components/Header.astro';
-import Footer from '../sections/Footer.astro';
+import "@fontsource-variable/montserrat";
+import Header from "../components/Header.astro";
+import Footer from "../sections/Footer.astro";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -12,75 +12,73 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
-	</head>
-	<body>
-		
-		<div class="contenedor-principal">
-			<Header />
-			<slot />
-		<Footer />
-
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="contenedor-Header">
+      <Header />
+    </div>
+	<slot />
+	<Footer />
+  </body>
 </html>
 <style is:global>
-	:root{
-		--color-gris-principal: #efefef;
-		--color-verde-principal: #59ab6e;
-		--color-azul-claro: #e9eef5;
-		--color-azul-oscuro: #212934;
-		--color-fondo-blanco: white;
-		--titulos: 3em;
-		--titulos-pequeños: 2.7em;
-		--interlineado: 27px;
-	}
-	*{
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-	}
-	html {
-		font-family: 'Montserrat Variable', sans-serif;
-	}
+  :root {
+    --color-gris-principal: #efefef;
+    --color-verde-principal: #59ab6e;
+    --color-azul-claro: #e9eef5;
+    --color-azul-oscuro: #212934;
+    --color-fondo-blanco: white;
+    --titulos: 3em;
+    --titulos-pequeños: 2.7em;
+    --interlineado: 27px;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Montserrat Variable", sans-serif;
+  }
 
-	body{
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
+  body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-	.contenedor-principal{
-		width: 100%;
-			display: flex;
-			flex-direction: column;
- 	}
+  .contenedor-Header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-	h1{
-		font-size: var(--titulos);
-	}
+  h1 {
+    font-size: var(--titulos);
+  }
 
-	p{
-		line-height: var(--interlineado);
-	}
+  p {
+    line-height: var(--interlineado);
+  }
 
-	a{
-		text-decoration: none;
-		color: white;
-	}
+  a {
+    text-decoration: none;
+    color: white;
+  }
 
-	li{
-		list-style: none;
-	}
+  li {
+    list-style: none;
+  }
 
-	@media only screen and (min-width: 1440px){
-		
-	} 
+  @media only screen and (min-width: 1024px) {
+	
+  }
 </style>

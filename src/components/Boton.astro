@@ -1,0 +1,17 @@
+---
+export interface Props{
+    href: string,
+    titulo: string
+}
+
+const {href, titulo } = Astro.props
+---
+
+<a href={href}>{titulo}</a>
+
+<style>
+    a{
+        background-color: var(--color-verde-principal);
+        color: white; 
+    }
+</style>
