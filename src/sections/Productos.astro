@@ -1,40 +1,56 @@
 ---
-import Card from "../components/Card.astro"
+import Card from "../components/Card.astro";
+import TarjetasDeProductos from "../components/TarjetasDeProductos.astro";
 ---
 
 <section>
-    <div class="contenedor-tarjetas">
-        <Card
-          titulo="Gym Weight"
-          descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt."
-          reviews="24"
-          precio="$240.00"
-          tags={[""]}
-          imagen="imagenes/feature_prod_01.jpg"
-        />
-  
-        <Card
-          titulo="Gym Weight"
-          descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt."
-          reviews="24"
-          precio="$240.00"
-          tags={[""]}
-          imagen="imagenes/feature_prod_02.jpg"
-        />
-  
-        <Card
-          titulo="Gym Weight"
-          descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt."
-          reviews="24"
-          precio="$240.00"
-          tags={[""]}
-          imagen="imagenes/feature_prod_03.jpg"
-        />
-    </div>
+  <div class="contenedor-tarjetas">
+    <TarjetasDeProductos 
+    titulo=""
+    estrellas=""
+    precio=""
+    imagen="imagenes/productos/shop_01.jpg"
+    />
+
+    <TarjetasDeProductos 
+    titulo=""
+    estrellas=""
+    precio=""
+    imagen="imagenes/productos/shop_02.jpg"
+    />
+
+    <TarjetasDeProductos 
+    titulo=""
+    estrellas=""
+    precio=""
+    imagen="imagenes/productos/shop_03.jpg"
+    />
+
+    <TarjetasDeProductos 
+    titulo=""
+    estrellas=""
+    precio=""
+    imagen="imagenes/productos/shop_01.jpg"
+    />
+
+    <TarjetasDeProductos 
+    titulo=""
+    estrellas=""
+    precio=""
+    imagen="imagenes/productos/shop_02.jpg"
+    />
+
+    <TarjetasDeProductos 
+    titulo=""
+    estrellas=""
+    precio=""
+    imagen="imagenes/productos/shop_03.jpg"
+    />
+  </div>
 </section>
 
 <style>
-    section {
+  section {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -45,12 +61,12 @@ import Card from "../components/Card.astro"
     gap: 20px;
     background-color: var(--color-azul-claro);
   }
-    .contenedor-tarjetas {
+  .contenedor-tarjetas {
     width: 100%;
     display: grid;
     place-items: center;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     max-width: 1024px;
   }
 </style>
