@@ -3,10 +3,11 @@ export interface Props{
     titulo: string,
     precio: string,
     estrellas: string,
-    imagen: string
+    imagen: string,
+    tallas: string
 }
 
-const {titulo, precio, estrellas, imagen } = Astro.props;
+const {titulo, precio, estrellas, imagen, tallas } = Astro.props;
 ---
 
 <div class="contenedor-tarjeta">
@@ -16,6 +17,7 @@ const {titulo, precio, estrellas, imagen } = Astro.props;
     <article>
         
         <h2>{titulo}</h2>
+        <h3>{tallas}</h3>
         <div>
             <p>{estrellas}</p>
             <p>{precio}</p>
@@ -29,6 +31,8 @@ const {titulo, precio, estrellas, imagen } = Astro.props;
     .contenedor-tarjeta{
         background-color: white;
         border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
     }
 
     figure{
