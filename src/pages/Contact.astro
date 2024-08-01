@@ -6,9 +6,12 @@ import ProductosDestacados from '../sections/ProductosDestacados.astro';
 ---
 
 <Layout title="Contact">
-	<Hero />
+	
 	<main>
-		<ProductosDestacados />
+		<section>
+			<h1>Contact Us</h1>
+			<p>Proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet.</p>
+		</section>
 	</main>
 </Layout>
 
@@ -18,6 +21,15 @@ import ProductosDestacados from '../sections/ProductosDestacados.astro';
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	section{
+		width: 100%;
+		height: 50vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 	
 	/* @media only screen and (min-width: 1200px){
