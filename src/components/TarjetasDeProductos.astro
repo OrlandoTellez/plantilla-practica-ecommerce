@@ -2,12 +2,11 @@
 export interface Props{
     titulo: string,
     precio: string,
-    estrellas: string,
     imagen: string,
     tallas: string
 }
 
-const {titulo, precio, estrellas, imagen, tallas } = Astro.props;
+const {titulo, precio, imagen, tallas } = Astro.props;
 ---
 
 <div class="contenedor-tarjeta">
@@ -19,7 +18,7 @@ const {titulo, precio, estrellas, imagen, tallas } = Astro.props;
         <h2>{titulo}</h2>
         <h3>{tallas}</h3>
         <div>
-            <p>{estrellas}</p>
+            <!-- <p>{estrellas}</p> -->
             <p>{precio}</p>
         </div>
         

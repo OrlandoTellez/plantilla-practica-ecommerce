@@ -1,11 +1,17 @@
 ---
 import Card from "../components/Card.astro";
 import TarjetasDeProductos from "../components/TarjetasDeProductos.astro";
+import { getCollection } from "astro:content";
+
+const productos = await getCollection("tips")
+
 ---
 
 <section>
   <div class="contenedor-tarjetas">
-    <TarjetasDeProductos 
+    
+
+    <!-- <TarjetasDeProductos 
     titulo="Oupidatat non"
     estrellas="0 0 0 0 0"
     precio="$250.00"
@@ -68,7 +74,7 @@ import TarjetasDeProductos from "../components/TarjetasDeProductos.astro";
     precio="$250.00"
     tallas="M/L/X/XL"
     imagen="imagenes/productos/shop_09.jpg"
-    />
+    /> -->
 
     
   </div>

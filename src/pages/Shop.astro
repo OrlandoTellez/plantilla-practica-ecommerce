@@ -6,12 +6,30 @@ import ProductosDestacados from '../sections/ProductosDestacados.astro';
 import Categorias from '../sections/Categorias.astro';
 import Productos from '../sections/Productos.astro';
 import HeroShop from '../sections/HeroAbout.astro';
+import { getCollection } from 'astro:content';
+import TarjetasDeProductos from '../components/TarjetasDeProductos.astro';
+
+const productos = await getCollection("tips")
+
 ---
 
 <Layout title="Shop">
 	<main>
 		<Categorias />
 		<Productos />
+		<div>
+			{
+				productos.map((datos) => (
+					<TarjetasDeProductos
+					imagen={datos.data.imagen}
+					tallas={datos.data.tallas}
+					titulo={datos.data.titulo}
+					precio={datos.data.precio}
+					/>
+				))
+			}
+		</div>
+	  
 	</main>
 </Layout>
 
